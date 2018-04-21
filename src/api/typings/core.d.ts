@@ -19,6 +19,13 @@ export interface PastTransaction {
   txid: string
 }
 
+export interface apiResponse {
+  jsonrpc: string,
+  id: number,
+  result: boolean,
+  txid: string
+}
+
 export interface apiConfig {
   net: net
   address?: string
@@ -27,7 +34,7 @@ export interface apiConfig {
   signingFunction?: signingFunction
   url?: string
   balance?: Balance
-  response?: string
+  response?: apiResponse
   intents?: TransactionOutput[]
   sendingFromSmartContract?: boolean
   tx?: Transaction
